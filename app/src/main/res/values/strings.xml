@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">DiceRoller</string>
     <string name="roll">Roll</string>
-    <string name="result_placeholder">Roll the dice!</string>
 </resources>
