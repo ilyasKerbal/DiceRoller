@@ -3,15 +3,22 @@ package com.ilyaskerbal.diceroller
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
+import android.widget.TextView
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val roll_button : Button = findViewById(R.id.roll_button);
-        roll_button.setOnClickListener {
-            Toast.makeText(this, "Button Tapped!", Toast.LENGTH_SHORT).show()
+        val rollButton : Button = findViewById(R.id.roll_button);
+        rollButton.setOnClickListener {
+            rollDice()
         }
+    }
+
+    private fun rollDice() {
+        val textResult : TextView = findViewById(R.id.text_result)
+        val randomInt = Random().nextInt(6) + 1
+        textResult.text = randomInt.toString()
     }
 }
